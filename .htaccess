@@ -1,0 +1,11 @@
+DirectoryIndex index.php
+
+# Block access to hidden files and directories (such as .git)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(\.git|src)(/|$) - [F,L]
+</IfModule>
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
