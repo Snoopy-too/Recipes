@@ -418,6 +418,12 @@
       modalDialog.scrollTop = 0;
     }
     backdrop.scrollTop = 0;
+    requestAnimationFrame(() => {
+      if (modalDialog) {
+        modalDialog.scrollTop = 0;
+      }
+      backdrop.scrollTop = 0;
+    });
     document.body.style.overflow = 'hidden';
     if (window.location.hash !== '#' + id) {
       history.replaceState(null, '', '#' + encodeURIComponent(id));
@@ -425,11 +431,11 @@
   }
 
   function closeModal() {
-    backdrop.classList.remove('open');
     if (modalDialog) {
       modalDialog.scrollTop = 0;
     }
     backdrop.scrollTop = 0;
+    backdrop.classList.remove('open');
     document.body.style.overflow = '';
     currentRecipe = null;
     if (window.location.hash) {

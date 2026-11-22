@@ -35,7 +35,7 @@ $safeJson = json_encode(
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Montoya Family Recipes</title>
-  <link rel="stylesheet" href="assets/app.css">
+  <link rel="stylesheet" href="assets/app.css?v=<?= (int) (@filemtime(__DIR__ . '/assets/app.css') ?: 1) ?>">
 </head>
 <body>
   <header class="site-header">
@@ -128,6 +128,6 @@ $safeJson = json_encode(
   </div>
 
   <script id="recipes-data" type="application/json"><?= $safeJson ?></script>
-  <script src="assets/app.js"></script>
+  <script src="assets/app.js?v=<?= (int) (@filemtime(__DIR__ . '/assets/app.js') ?: 1) ?>"></script>
 </body>
 </html>
