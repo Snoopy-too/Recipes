@@ -3875,6 +3875,120 @@
     "chefNotes": []
   },
   {
+    "id": "sweet-and-sour-sauce",
+    "title": "Sweet and Sour Sauce",
+    "subtitle": "Tangy pineapple juice, rice vinegar, brown sugar, ketchup, soy & aromatic glaze",
+    "category": "sauces_dressings",
+    "categoryLabel": "Sauces, Dressings & Rubs",
+    "sourceType": "gdocs",
+    "sourceFile": "06_Google_Docs_Recipes/Sweet_and_Sour_Sauce.md",
+    "googleDocUrl": "https://docs.google.com/document/d/1Vpepl9ZDk9aSTdhI4W3Nr9NpNeDx_xQsHovY4wIV7uo/edit",
+    "image": "",
+    "icon": "🍍",
+    "scalingMode": "batch_volume",
+    "pieceName": "Batch Portions",
+    "baseCount": 1,
+    "basePieceWeightGrams": 463,
+    "minCount": 1,
+    "maxCount": 10,
+    "minWeightGrams": 150,
+    "maxWeightGrams": 1500,
+    "weightStepGrams": 25,
+    "sizePresets": [],
+    "prepTime": "5 mins",
+    "cookTime": "5–8 mins",
+    "tempC": 100,
+    "tempF": 212,
+    "yieldText": "1 batch (~463g / ~1.75 cups)",
+    "ingredientGroups": [
+      {
+        "groupName": "Sweet & Sour Sauce Base (Gram-Calibrated)",
+        "ingredients": [
+          {
+            "name": "Pineapple Juice",
+            "grams": 180,
+            "amount": 180,
+            "unit": "g",
+            "volumeText": "~3/4 cup",
+            "isFlour": false,
+            "notes": "Top up with water if short"
+          },
+          {
+            "name": "Rice Vinegar",
+            "grams": 90,
+            "amount": 90,
+            "unit": "g",
+            "volumeText": "~6 tbsp",
+            "isFlour": false,
+            "notes": ""
+          },
+          {
+            "name": "Brown Sugar",
+            "grams": 57,
+            "amount": 57,
+            "unit": "g",
+            "volumeText": "~1/4 cup packed",
+            "isFlour": false,
+            "notes": ""
+          },
+          {
+            "name": "Ketchup",
+            "grams": 75,
+            "amount": 75,
+            "unit": "g",
+            "volumeText": "~4.5 tbsp",
+            "isFlour": false,
+            "notes": ""
+          },
+          {
+            "name": "Soy Sauce",
+            "grams": 36,
+            "amount": 36,
+            "unit": "g",
+            "volumeText": "~2 tbsp",
+            "isFlour": false,
+            "notes": ""
+          },
+          {
+            "name": "Garlic Paste",
+            "grams": 9,
+            "amount": 9,
+            "unit": "g",
+            "volumeText": "~1.5 tsp",
+            "isFlour": false,
+            "notes": ""
+          },
+          {
+            "name": "Ginger Paste",
+            "grams": 4,
+            "amount": 4,
+            "unit": "g",
+            "volumeText": "~3/4 tsp",
+            "isFlour": false,
+            "notes": ""
+          },
+          {
+            "name": "Cornstarch (thickening)",
+            "grams": 12,
+            "amount": 12,
+            "unit": "g",
+            "volumeText": "~1.5 tbsp",
+            "isFlour": false,
+            "notes": "Dissolve in a splash of the cold juice or water before simmering"
+          }
+        ]
+      }
+    ],
+    "instructions": [
+      "Whisk the cornstarch into a small splash of the cold pineapple juice (or water) until completely smooth with no lumps.",
+      "Combine the remaining pineapple juice, rice vinegar, brown sugar, ketchup, soy sauce, garlic paste, and ginger paste in a saucepan over medium heat, stirring until the brown sugar dissolves.",
+      "Bring to a gentle simmer, stir in the cornstarch slurry, and cook for 1–2 minutes while stirring constantly until the sauce turns glossy and thickens to coat the back of a spoon."
+    ],
+    "chefNotes": [
+      "Top up the pineapple juice with water if short of 180g to keep the sweet-to-acid ratio balanced."
+    ]
+  },
+  {
     "id": "in-n-out-double-double-animal-style",
     "title": "In-N-Out Double-Double, Animal-Style (The Burger Lab)",
     "subtitle": "Kenji López-Alt's mustard-grilled 2oz patties, fondue caramelized onions & Spread",
