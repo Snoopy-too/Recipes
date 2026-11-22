@@ -16,6 +16,7 @@
   const catButtons = Array.from(document.querySelectorAll('.cat-pill'));
 
   const backdrop = document.getElementById('modal-backdrop');
+  const modalDialog = backdrop ? backdrop.querySelector('.modal') : null;
   const modalClose = document.getElementById('modal-close');
   const modalIcon = document.getElementById('modal-icon');
   const modalTitle = document.getElementById('modal-title');
@@ -413,6 +414,10 @@
     renderInstructionsAndNotes();
 
     backdrop.classList.add('open');
+    if (modalDialog) {
+      modalDialog.scrollTop = 0;
+    }
+    backdrop.scrollTop = 0;
     document.body.style.overflow = 'hidden';
     if (window.location.hash !== '#' + id) {
       history.replaceState(null, '', '#' + encodeURIComponent(id));
@@ -421,6 +426,10 @@
 
   function closeModal() {
     backdrop.classList.remove('open');
+    if (modalDialog) {
+      modalDialog.scrollTop = 0;
+    }
+    backdrop.scrollTop = 0;
     document.body.style.overflow = '';
     currentRecipe = null;
     if (window.location.hash) {
