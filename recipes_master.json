@@ -8838,6 +8838,125 @@
     ]
   },
   {
+    "id": "shallow-fried-eggplant-agebitashi",
+    "title": "Shallow-Fried Eggplant Agebitashi (Nasu no Agebitashi)",
+    "subtitle": "Silky Japanese eggplant shallow-fried and steeped in a savory dashi-shoyu-mirin bath with fresh ginger",
+    "category": "sides_rice_beans",
+    "categoryLabel": "Sides, Rice, Beans & Soups",
+    "sourceType": "gdocs",
+    "sourceFile": "06_Google_Docs_Recipes/Shallow_Fried_Eggplant_Agebitashi.md",
+    "googleDocUrl": "https://docs.google.com/document/d/14D2zXifhJUWb60DadcXtKKjMlQ4QKFAwUTSu02HCdhM/edit",
+    "image": "",
+    "icon": "🍆",
+    "scalingMode": "portion_weight",
+    "pieceName": "Servings",
+    "baseCount": 2,
+    "basePieceWeightGrams": 308.0,
+    "minCount": 1,
+    "maxCount": 10,
+    "minWeightGrams": 150,
+    "maxWeightGrams": 500,
+    "weightStepGrams": 10,
+    "sizePresets": [],
+    "prepTime": "25 mins",
+    "cookTime": "5 mins (+ 45 mins soak)",
+    "tempC": 175,
+    "tempF": 350,
+    "yieldText": "2–3 servings (250–300g eggplant; ~616g total with soaking bath)",
+    "ingredientGroups": [
+      {
+        "groupName": "Eggplant & Frying",
+        "ingredients": [
+          {
+            "name": "Japanese Eggplants (Senryo Nasu)",
+            "grams": 275,
+            "amount": 275,
+            "unit": "g",
+            "volumeText": "2–3 medium eggplants (250–300g), halved lengthwise",
+            "isFlour": false,
+            "notes": "Score purple skin 2–3 mm deep; do not salt"
+          }
+        ]
+      },
+      {
+        "groupName": "Dashi-Shoyu Soaking Bath (4:1:1 Ratio)",
+        "ingredients": [
+          {
+            "name": "Water",
+            "grams": 200,
+            "amount": 200,
+            "unit": "g",
+            "volumeText": "~3/4 cup + 1.5 tbsp",
+            "isFlour": false,
+            "notes": ""
+          },
+          {
+            "name": "Dashi Powder (Hondashi)",
+            "grams": 2,
+            "amount": 2,
+            "unit": "g",
+            "volumeText": "~2/3 tsp",
+            "isFlour": false,
+            "notes": ""
+          },
+          {
+            "name": "Shoyu (Soy Sauce)",
+            "grams": 58,
+            "amount": 58,
+            "unit": "g",
+            "volumeText": "~3.5 tbsp",
+            "isFlour": false,
+            "notes": ""
+          },
+          {
+            "name": "Mirin",
+            "grams": 58,
+            "amount": 58,
+            "unit": "g",
+            "volumeText": "~3.5 tbsp",
+            "isFlour": false,
+            "notes": ""
+          },
+          {
+            "name": "Rice Vinegar (Optional)",
+            "grams": 5,
+            "amount": 5,
+            "unit": "g",
+            "volumeText": "1 tsp",
+            "isFlour": false,
+            "notes": "Optional, for a brighter finish"
+          }
+        ]
+      },
+      {
+        "groupName": "Garnish & Finish",
+        "ingredients": [
+          {
+            "name": "Fresh Ginger (Shoga)",
+            "grams": 18,
+            "amount": 18,
+            "unit": "g",
+            "volumeText": "15–20g, freshly grated",
+            "isFlour": false,
+            "notes": "Grate right before serving"
+          }
+        ]
+      }
+    ],
+    "instructions": [
+      "Score the Eggplant (Skip the Salt): Trim stems and slice each eggplant in half lengthwise. Place purple skin-side up and score the skin in a fine diagonal or crisscross diamond pattern 2–3 mm deep (about 5 mm apart). Leave the white inner flesh flat and un-scored, and do not salt.",
+      "Surface-Dehydrate (The Sweet Spot): Arrange the scored eggplants skin-side down in an air fryer basket and run the Dehydrate setting at 50°C–60°C (120°F–140°F) for 15–25 minutes until the cut surface feels tacky, matte, and dry (not shriveled). Alternatively, let sit uncovered on paper towels for 30 minutes.",
+      "Prepare the Soaking Bath: Combine 200g water, 2g dashi powder, 58g shoyu, and 58g mirin (plus optional 5g rice vinegar) in a small saucepan or microwave-safe bowl. Heat briefly until just simmering to dissolve the dashi and cook off raw alcohol from the mirin, then pour into a shallow flat-bottomed dish and cool to room temperature.",
+      "Shallow-Fry in 1.5–2 cm of Oil: Fill your smallest suitable skillet 1.5–2 cm (1/2 to 3/4 inch) deep with neutral frying oil (canola, vegetable, or rice bran) and heat to 175°C–180°C (350°F–360°F). Working in uncrowded batches, fry purple skin-side down first for 90–120 seconds to lock in the bright purple pigment, then flip flesh-side down and fry 60–90 seconds until golden and tender.",
+      "Steep & Serve: Lift from the oil, let drip 3–5 seconds, and drop sizzling hot directly into the room-temperature soaking bath, purple skin-side up (flesh-side down). If broth doesn't cover the tops, lay a sheet of kitchen paper towel over the eggplants (otoshibuta style) to wick broth over the skin. Rest 45 minutes, plate, spoon over a little soaking broth, and crown with freshly grated ginger (plus optional sliced green onions/negi or katsuobushi)."
+    ],
+    "chefNotes": [
+      "Why Skin-Side Up in the Bath: Keeping the white flesh submerged maximizes broth absorption via capillary action, while keeping the purple skin above the dark soy sauce preserves its vibrant jewel tone.",
+      "No Salt Needed: Japanese eggplants are naturally sweet without bitterness; pre-salting makes the finished dish overly salty once steeped in shoyu and turns the flesh spongy.",
+      "Frying Oil & Optional Toppings: Use neutral oil (canola, vegetable, or rice bran) to 1.5–2 cm depth in a small skillet, and finish with optional sliced green onions (negi) or katsuobushi to taste."
+    ]
+  },
+  {
     "id": "old-fashioned-chocolate-chip-cookies",
     "title": "Old Fashioned Chocolate Chip Cookies (Gram-Weighed)",
     "subtitle": "Rich brown-sugar & butter cookies with 340g chocolate chips (Full & Half batch calibrated)",
