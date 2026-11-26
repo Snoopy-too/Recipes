@@ -51,6 +51,50 @@
     return num.toFixed(2).replace(/\.?0+$/, '');
   }
 
+  const QTY_TOKEN =
+    '(?:\\d+\\s+\\d+/\\d+|\\d+/\\d+|\\d{1,3}(?:,\\d{3})+(?:\\.\\d+)?|\\d+(?:\\.\\d+)?)';
+  const INSTRUCTION_QTY_RE = new RegExp(
+    '(' +
+      QTY_TOKEN +
+      ')(?:\\s*([–-])\\s*(' +
+      QTY_TOKEN +
+      '))?(\\s*)(kg|g|ml|l|oz|lbs?|tbsp|tsp|cups?|cloves?|cans?)\\b',
+    'gi'
+  );
+
+  function parseQuantityToken(token) {
+    const cleaned = token.replace(/,/g, '').trim();
+    const mixedMatch = cleaned.match(/^(\d+)\s+(\d+)\/(\d+)$/);
+    if (mixedMatch) {
+      const denom = Number(mixedMatch[3]);
+      return denom ? Number(mixedMatch[1]) + Number(mixedMatch[2]) / denom : NaN;
+    }
+    const fracMatch = cleaned.match(/^(\d+)\/(\d+)$/);
+    if (fracMatch) {
+      const denom = Number(fracMatch[2]);
+      return denom ? Number(fracMatch[1]) / denom : NaN;
+    }
+    return Number(cleaned);
+  }
+
+  function scaleInstructionText(text, factor) {
+    if (!text || Math.abs(factor - 1) < 0.01) return text;
+    return String(text).replace(
+      INSTRUCTION_QTY_RE,
+      (match, q1, sep, q2, space, unit) => {
+        const v1 = parseQuantityToken(q1);
+        if (!Number.isFinite(v1)) return match;
+        let scaled = formatNumber(v1 * factor);
+        if (q2 !== undefined) {
+          const v2 = parseQuantityToken(q2);
+          if (!Number.isFinite(v2)) return match;
+          scaled += sep + formatNumber(v2 * factor);
+        }
+        return scaled + space + unit;
+      }
+    );
+  }
+
   function renderGrid() {
     const q = searchQuery.trim().toLowerCase();
     const filtered = recipes.filter((r) => {
@@ -356,6 +400,16 @@
   }
 
   function renderInstructionsAndNotes() {
+    const doneIndices = new Set(
+      Array.from(instructionsContainer.querySelectorAll('.step-item')).reduce(
+        (acc, node, idx) => {
+          if (node.classList.contains('done')) acc.push(idx);
+          return acc;
+        },
+        []
+      )
+    );
+
     instructionsContainer.replaceChildren();
     chefNotesContainer.replaceChildren();
     sourceFooter.replaceChildren();
@@ -363,9 +417,11 @@
     const r = currentRecipe;
     if (!r) return;
 
+    const factor = getScaleFactor();
     const ol = el('ol', 'step-list');
-    (r.instructions || []).forEach((step) => {
-      const li = el('li', 'step-item', step);
+    (r.instructions || []).forEach((step, idx) => {
+      const li = el('li', 'step-item', scaleInstructionText(step, factor));
+      if (doneIndices.has(idx)) li.classList.add('done');
       li.addEventListener('click', () => li.classList.toggle('done'));
       ol.appendChild(li);
     });
@@ -396,6 +452,7 @@
   function refreshModalNumbers() {
     renderScaler();
     renderIngredients();
+    renderInstructionsAndNotes();
   }
 
   function openRecipe(id) {
@@ -409,9 +466,9 @@
     modalTitle.textContent = r.title;
     modalSubtitle.textContent = r.subtitle || '';
 
+    instructionsContainer.replaceChildren();
     renderMetaStrip();
     refreshModalNumbers();
-    renderInstructionsAndNotes();
 
     backdrop.classList.add('open');
     if (modalDialog) {
